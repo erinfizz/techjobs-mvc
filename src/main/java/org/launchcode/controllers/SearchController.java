@@ -29,7 +29,7 @@ public class SearchController {
         ArrayList<HashMap<String, String>> jobs;
 
         if (searchType.equals("all") || searchType.equals("")) {
-            jobs = JobData.findByValue(searchType);
+            jobs = JobData.findByValue(searchTerm);
         } else {
             jobs = JobData.findByColumnAndValue(searchType, searchTerm);
         }
